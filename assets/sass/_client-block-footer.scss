@@ -1,0 +1,12 @@
+.client-block-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  > div {
+    max-width: 7rem;
+    > img {
+      max-height: 4rem;
+    }
+  }
+}

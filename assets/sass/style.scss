@@ -1,0 +1,91 @@
+/*
+Theme Name: Smart Digital
+Theme URI: https://wordpress.org/themes/twentyseventeen/
+Author: Smart Digital
+Author URI: https://smartdigital.tech/
+Description: Smart Digital
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: smartdigitaltech
+Tags: smart-digital
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+// Override variables
+@import './overrides';
+
+// Bulma Imports
+@import "../bulma-0.8.0/sass/utilities/_all.sass";
+@import "../bulma-0.8.0/sass/base/_all.sass";
+@import "../bulma-0.8.0/sass/grid/_all.sass";
+@import "../bulma-0.8.0/sass/elements/button.sass";
+@import "../bulma-0.8.0/sass/elements/container.sass";
+@import "../bulma-0.8.0/sass/elements/title.sass";
+@import "../bulma-0.8.0/sass/form/_all.sass";
+@import "../bulma-0.8.0/sass/components/navbar.sass";
+@import "../bulma-0.8.0/sass/layout/hero.sass";
+@import "../bulma-0.8.0/sass/layout/section.sass";
+@import "../bulma-0.8.0/sass/layout/footer.sass";
+
+@import './variables';
+@import './font';
+
+// Overrides
+a {
+  font-weight: $weight-bold;
+  transition: all 500ms ease-in-out;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.button {
+  text-transform: uppercase;;
+}
+
+.is-primary-background {
+  background-color: $primary;
+}
+
+.cms-content {
+  h1 {
+    @extend .title;
+    @extend .is-1;
+  }
+
+  h2 {
+    @extend .title;
+    @extend .is-2;
+  }
+
+  h3 {
+    @extend .title;
+    @extend .is-3;
+  }
+
+  h4 {
+    @extend .title;
+    @extend .is-4;
+  }
+
+  h5 {
+    @extend .title;
+    @extend .is-5;
+  }
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Components
+@import './buttons';
+@import './nav';
+@import './blocks';
+@import './banner';
+@import './footer';
+@import './client-block-footer';
+
+// Pages
+

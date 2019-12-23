@@ -1,0 +1,29 @@
+.blocks {
+  .card-image {
+    margin-bottom: $size-medium;
+    .image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-radius: $border-radius;
+      height: 15rem;
+    }
+  }
+
+  .content {
+    p {
+      margin-bottom: $size-small;
+    }
+  }
+
+  &--gapless {
+    .card-image {
+      img {
+        border-radius: 0;
+      }
+    }
+    .content {
+      padding: $size-small;
+    }
+  }
+}

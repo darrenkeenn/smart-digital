@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'RNS Sanz';
+  src: url('./assets/fonts/rnsSanz/rnssanz-normal-webfont.woff2') format('woff2'),
+       url('./assets/fonts/rnsSanz/rnssanz-normal-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'RNS Sanz';
+  font-weight: 500;
+  src: url('./assets/fonts/rnsSanz/rnssanz-semibold-webfont.woff2') format('woff2'),
+       url('./assets/fonts/rnsSanz/rnssanz-semibold-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'RNS Sanz';
+  font-weight: 700;
+  src: url('./assets/fonts/rnsSanz/rnssanz-bold-webfont.woff2') format('woff2'),
+       url('./assets/fonts/rnsSanz/rnssanz-bold-webfont.woff') format('woff');
+}
