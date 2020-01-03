@@ -23,19 +23,29 @@
 <section class="section">
   <div class="container">
 
-      <?php
-      $clients_loop = new WP_Query(
-        array(
-          'post_type' => 'client',
-          'posts_per_page' => -1,
-        )
-      );
+    <?php
+    $client_loop = new WP_Query(
+      array(
+        'post_type' => 'client',
+        'posts_per_page' => -1,
+      )
+    );
 
-      while ($client_loop->have_posts()) : $client_loop->the_post();
+    while ($client_loop->have_posts()) : $client_loop->the_post();
+      $thumb_id = get_post_thumbnail_id();
+      $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
       ?>
-        <h5 class="title is-5"><?php the_title(); ?></h5>
-        <?php the_content(); ?>
-    </div>
+      <div class="columns is-vcentered">
+        <div class="column is-2">
+          <img src="<?php echo wp_get_attachment_url($thumb_id) ?>" />
+        </div>
+        <div class="column">
+          <h5 class="title is-5"><?php the_title(); ?></h5>
+          <?php the_content(); ?>
+        </div>
+      </div>
+    <?php endwhile; ?>
+  </div>
   </div>
 </section>
 

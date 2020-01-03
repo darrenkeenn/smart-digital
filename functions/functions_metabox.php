@@ -541,21 +541,6 @@ function cmb_lw_meta_boxes( $meta_boxes ) {
     ),
   );
 
-  $meta_boxes['homepage_content'] = array(
-    'id'         => 'homepage_content',
-    'title'      => __('Homepage content', 'cmb'),
-    'include' => array(
-      'template' => array('page-services.php'),
-    ),
-    'fields'   => array(
-      array(
-        'name' => 'Name',
-        'id'   => 'name',
-        'type' => 'text',
-      ),
-    ),
-  );
-
   $meta_boxes['client_type_content'] = array(
     'id'         => 'client_type_content',
     'title'      => __('Client type content', 'cmb'),
@@ -569,6 +554,12 @@ function cmb_lw_meta_boxes( $meta_boxes ) {
         'desc' => 'Featured clients will display in the client image footer block.',
         'id' => $prefix . 'is_featured',
         'type' => 'checkbox',
+      ),
+      array(
+        'name' => 'Logo',
+        'id'   => $prefix . 'logo',
+        'type' => 'image_advanced',
+        'max_file_uploads' => 1
       ),
     ),
   );
