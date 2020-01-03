@@ -16,5 +16,6 @@ add_theme_support('post-thumbnails');
 require_once('functions/functions_post-types.php');
 require_once('functions/functions_metabox.php');
 require_once('functions/functions_main-site.php');
-require_once('functions/functions_homepage-options.php');
+require_once('functions/functions_homepage_options.php');
+require_once('functions/functions_services_options.php');
 require_once('functions/functions_nav-walker.php');

@@ -40,9 +40,9 @@
 	        </div>
 	        <div class="column has-text-right">
 	          <p>
-	            &copy; Copyright <?php echo get_current_blog_id() ?> 2019
+	            &copy; Copyright Smart Digital 2020
 	            <script>
-	              new Date().getFullYear() > 2019 && document.write("-" + new Date().getFullYear());
+	              new Date().getFullYear() > 2020 && document.write("- " + new Date().getFullYear());
 	            </script>
 	          </p>
 	        </div>

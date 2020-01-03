@@ -77,6 +77,7 @@ function z_create_client_custom_post_type()
     'publicly_queryable'  => true,
     'rewrite' => array('slug' => 'clients'),
     'query_var' => true,
+    'menu_icon' => 'dashicons-format-status',
     'supports' => array(
       'title',
       'editor',
@@ -125,6 +126,7 @@ function z_create_service_custom_post_type()
     'publicly_queryable'  => true,
     'rewrite' => array('slug' => 'services'),
     'query_var' => true,
+    'menu_icon' => 'dashicons-awards',
     'supports' => array(
       'title',
       'editor',

@@ -1,20 +1,20 @@
 <?php
 
 /**
- * Template Name: Smart Tech Services
- * Description: Smart Tech Services
+ * Template Name: Smart Tech Clients
+ * Description: Smart Tech Clients
  */
 ?>
 <?php get_header(); ?>
 
 <section class="hero is-info banner">
-  <div class="hero-body" style="background-image: url('<?php echo get_theme_mod('sd-services-content-top-banner-image') ?>');">
+  <div class="hero-body" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/banner.jpg'); ?>');">
     <div class="container has-text-centered">
       <h1 class="title is-1">
         <?php the_title() ?>
       </h1>
       <h2 class="subtitle is-3">
-        <?php echo get_theme_mod('sd-services-content-top-banner-sub-text') ?>
+        Web, Mobile, Immersive Reality & Social Media Marketing
       </h2>
     </div>
   </div>
@@ -22,30 +22,19 @@
 
 <section class="section">
   <div class="container">
-    <div class="columns is-multiline">
 
       <?php
-      $service_loop = new WP_Query(
+      $clients_loop = new WP_Query(
         array(
-          'post_type' => 'service',
+          'post_type' => 'client',
           'posts_per_page' => -1,
         )
       );
 
-      while ($service_loop->have_posts()) : $service_loop->the_post();
-        ?>
-        <div class="column is-4 has-text-centered">
-          <?php
-            $icon = rwmb_meta('_cmb_icon');
-            if ($icon) {
-              ?>
-            <p><i class="fas <?php echo $icon ?> fa-3x"></i></p><br />
-          <?php } ?>
-          <h5 class="title is-5"><?php the_title(); ?></h5>
-          <?php the_content(); ?>
-        </div>
-      <?php endwhile;
+      while ($client_loop->have_posts()) : $client_loop->the_post();
       ?>
+        <h5 class="title is-5"><?php the_title(); ?></h5>
+        <?php the_content(); ?>
     </div>
   </div>
 </section>

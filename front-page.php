@@ -85,7 +85,6 @@
   </div>
 </section>
 
-
 <section class="section is-primary-background">
   <div class="container">
     <?php get_template_part('template-parts/contact-promotion'); ?>
