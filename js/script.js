@@ -3,7 +3,9 @@
   var nav = document.querySelector('#' + burger.dataset.target);
 
   burger.addEventListener('click', function () {
-    burger.classList.toggle('is-active');
+    burger.classList.toggle('is-active something-else');
     nav.classList.toggle('is-active');
   });
 })();
+
+

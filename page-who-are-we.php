@@ -9,6 +9,7 @@
 
 <section class="hero is-info banner">
   <div class="hero-body" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/banner.jpg'); ?>');">
+    <div class="black-screen"></div>
     <div class="container has-text-centered">
       <h1 class="title is-1">
         Who are we
@@ -33,7 +34,7 @@
           <?php
             $thumb_id = get_post_thumbnail_id();
             $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
-          ?>
+            ?>
           <img src="<?php echo wp_get_attachment_url($thumb_id) ?>" alt="<?php echo $alt ?>" />
         </div>
       </div>

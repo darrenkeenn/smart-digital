@@ -9,6 +9,7 @@
 
 <section class="hero is-info is-large banner">
   <div class="hero-body" style="background-image: url(<?php echo get_theme_mod('sd-homepage-content-top-banner-image') ?>);">
+    <div class="black-screen"></div>
     <div class="container has-text-centered">
       <h1 class="title is-1">
         <?php echo get_theme_mod('sd-homepage-content-top-banner-text') ?>
@@ -74,6 +75,7 @@
 
 <section class="hero is-info is-large banner">
   <div class="hero-body" style="background-image: url(<?php echo get_theme_mod('sd-homepage-content-mid-banner-image') ?>);">
+    <div class="black-screen"></div>
     <div class="container has-text-centered">
       <h1 class="title  is-size-1">
         <?php echo get_theme_mod('sd-homepage-content-mid-banner-text') ?>

@@ -9,6 +9,7 @@
 
 <section class="hero is-info banner">
   <div class="hero-body" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/banner.jpg'); ?>');">
+    <div class="black-screen"></div>
     <div class="container has-text-centered">
       <h1 class="title is-1">
         <?php the_title() ?>
@@ -20,9 +21,8 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-
+<section>
+  <div class="columns is-gapless is-multiline client-list">
     <?php
     $client_loop = new WP_Query(
       array(
@@ -35,22 +35,24 @@
       $thumb_id = get_post_thumbnail_id();
       $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
       ?>
-      <div class="columns is-vcentered">
-        <div class="column is-2">
-          <img src="<?php echo wp_get_attachment_url($thumb_id) ?>" />
+      <div class="is-6 column client-item__feature-image is-relative" style="background: url(<?php echo wp_get_attachment_url($thumb_id) ?>) no-repeat top left / cover">
+        <div class="black-screen"></div>
+        <div class="client-item__feature-image__title">
+          <h3 class="is-1 title"><?php the_title(); ?></h3>
         </div>
-        <div class="column">
-          <h5 class="title is-5"><?php the_title(); ?></h5>
+      </div>
+      <div class="is-6 column">
+        <div class="client-item__content section cms-content">
           <?php the_content(); ?>
         </div>
       </div>
     <?php endwhile; ?>
   </div>
-  </div>
 </section>
 
 <section class="hero is-info is-large banner">
   <div class="hero-body" style="background-image: url(<?php echo get_theme_mod('sd-services-content-mid-banner-image') ?>);">
+    <div class="black-screen"></div>
     <div class="container has-text-centered">
       <h1 class="title  is-size-1">
         <?php echo get_theme_mod('sd-services-content-mid-banner-text') ?>
